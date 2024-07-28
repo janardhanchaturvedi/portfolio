@@ -7,27 +7,27 @@ const Contact = () => {
   const darkMode = theme.state.darkMode;
   const form = useRef();
   const [done, setDone] = useState(false)
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_x6gamsds",
-        "template_vr9i48y",
-        form.current,
-        "gCOvJN3yseEIuOnXx"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setDone(true);
-          form.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+  //   emailjs
+  //     .sendForm(
+  //       "service_x6gamsds",
+  //       "template_vr9i48y",
+  //       form.current,
+  //       "gCOvJN3yseEIuOnXx"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         setDone(true);
+  //         form.reset();
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
 
   return (
     <div className="contact-form" id="contact">
